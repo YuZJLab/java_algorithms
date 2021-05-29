@@ -1,0 +1,10 @@
+# Default ignored files
+/shelf/
+/workspace.xml
+# CodeStream ignored files
+/../../java_demo\.idea/codestream.xml
+# Datasource local storage ignored files
+/../../../../../../../:\Users\admin\source\repos\java_demo\.idea/dataSources/
+/dataSources.local.xml
+# Editor-based HTTP Client requests
+/httpRequests/
