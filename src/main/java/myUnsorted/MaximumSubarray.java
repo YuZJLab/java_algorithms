@@ -7,7 +7,7 @@ import java.util.Arrays;
  *
  * @author YU Zhejian
  */
-public class maximumSubarray {
+public class MaximumSubarray {
     /**
      * The testing script
      *
