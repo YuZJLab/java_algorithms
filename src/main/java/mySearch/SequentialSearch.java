@@ -23,18 +23,48 @@ public class SequentialSearch {
         System.out.println(Arrays.toString(searchRange(i, 115)));
     }
 
+    /**
+     * Wrapper for sequential search
+     *
+     * @param inputArr Input array
+     * @param target   The object you need to search
+     * @return The index. If not found, will return -1
+     */
     public static int search(int[] inputArr, int target) {
         return search(inputArr, target, 0, inputArr.length);
     }
 
+    /**
+     * Wrapper for sequential search. Will return all found indexes as array
+     *
+     * @param inputArr Input array
+     * @param target   The object you need to search
+     * @return The indexes of all founded objects. If not found, will return {-1}
+     */
     public static int[] searchAll(int[] inputArr, int target) {
         return searchAll(inputArr, target, 0, inputArr.length);
     }
 
+    /**
+     * Wrapper for sequential search. Will return a range where a new number needs to be inserted
+     *
+     * @param inputArr Input array (need to be reversely sorted)
+     * @param target   The object you need to search
+     * @return The indexes found. If not found, will return {0, -1} or {length-1, length}
+     */
     public static int[] searchRange(int[] inputArr, int target) {
         return searchRange(inputArr, target, 0, inputArr.length);
     }
 
+    /**
+     * Sequential search
+     *
+     * @param inputArr Input array
+     * @param target   The object you need to search
+     * @param from     Start index where you need to sort (inclusive)
+     * @param to       End index where you need to sort (exclusive)
+     * @return The index. If not found, will return -1
+     */
     public static int search(int[] inputArr, int target, int from, int to) {
         for (int pointer = from; pointer < to; pointer++) {
             if (inputArr[pointer] == target) {
@@ -44,6 +74,15 @@ public class SequentialSearch {
         return -1;
     }
 
+    /**
+     * Sequential search. Will return all found indexes as array
+     *
+     * @param inputArr Input array
+     * @param target   The object you need to search
+     * @param from     Start index where you need to sort (inclusive)
+     * @param to       End index where you need to sort (exclusive)
+     * @return The indexes of all founded objects. If not found, will return {-1}
+     */
     public static int[] searchAll(int[] inputArr, int target, int from, int to) {
         ArrayList<Integer> returnList = new ArrayList<>();
         for (int pointer = from; pointer < to; pointer++) {
@@ -58,6 +97,15 @@ public class SequentialSearch {
         }
     }
 
+    /**
+     * Sequential search. Will return a range where a new number needs to be inserted
+     *
+     * @param inputArr Input array (need to be reversely sorted)
+     * @param target   The object you need to search
+     * @param from     Start index where you need to sort (inclusive)
+     * @param to       End index where you need to sort (exclusive)
+     * @return The indexes found. If not found, will return {0, -1} or {length-1, length}
+     */
     public static int[] searchRange(int[] inputArr, int target, int from, int to) {
         int[] returnList = new int[]{-1, 0};
         if ((inputArr[from] <= target)) {
